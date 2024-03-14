@@ -1,0 +1,7 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+
+zookeeper:
+  connectionString: your.zookeeper.ip.address:2181
