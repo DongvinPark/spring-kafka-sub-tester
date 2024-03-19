@@ -13,6 +13,8 @@ public class LeaderElectionService {
   @Value("${zookeeper.connectionString}")
   private String zookeeperConnectionString;
 
+  private boolean startKafkaListener;
+
   public void electLeader() throws Exception {
     int sleepMsBetweenRetries = 100;
     int maxRetries = 3;
@@ -33,9 +35,15 @@ public class LeaderElectionService {
     if (leaderLatch.hasLeadership()) {
       // This node is the leader
       System.out.println("This node is the leader");
+      this.startKafkaListener = true;
     } else {
       // This node is not the leader
       System.out.println("This node is not the leader");
+      this.startKafkaListener = false;
     }
+  }
+
+  public boolean needToStartListener(){
+    return this.startKafkaListener;
   }
 }
