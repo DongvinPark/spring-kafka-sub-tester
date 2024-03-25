@@ -22,3 +22,6 @@ zookeeper:
 kafka:
   bootstrap:
     servers:
+
+subject:
+  limit: 80
