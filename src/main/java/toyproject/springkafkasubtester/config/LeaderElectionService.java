@@ -1,5 +1,6 @@
 package toyproject.springkafkasubtester.config;
 
+import java.util.concurrent.atomic.AtomicBoolean;
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
@@ -13,7 +14,7 @@ public class LeaderElectionService {
   @Value("${zookeeper.connectionString}")
   private String zookeeperConnectionString;
 
-  private boolean startKafkaListener;
+  private final AtomicBoolean startKafkaListener = new AtomicBoolean(false);
 
   public void electLeader() throws Exception {
     int sleepMsBetweenRetries = 100;
@@ -35,15 +36,16 @@ public class LeaderElectionService {
     if (leaderLatch.hasLeadership()) {
       // This node is the leader
       System.out.println("This node is the leader");
-      this.startKafkaListener = true;
+      this.startKafkaListener.set(true);
     } else {
       // This node is not the leader
       System.out.println("This node is not the leader");
-      this.startKafkaListener = false;
+      this.startKafkaListener.set(false);
     }
   }
 
   public boolean needToStartListener(){
-    return this.startKafkaListener;
+    System.out.println("needToStartListener called!!");
+    return this.startKafkaListener.get();
   }
 }

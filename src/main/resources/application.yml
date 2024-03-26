@@ -17,11 +17,11 @@ spring:
         format_sql: true
 
 zookeeper:
-  connectionString: your.zookeeper.ip.address:2181/znode-name
+  connectionString: 192.168.0.244:2181/leader
 
 kafka:
   bootstrap:
-    servers:
+    servers: 192.168.0.244:9092
 
 subject:
   limit: 80

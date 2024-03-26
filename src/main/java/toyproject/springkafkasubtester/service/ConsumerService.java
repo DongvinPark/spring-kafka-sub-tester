@@ -20,6 +20,7 @@ public class ConsumerService {
 
   @Transactional
   public void processMessage(String kafkaMessage){
+    System.out.println("kafkaMessage = " + kafkaMessage);
     // 학생이 저장돼 있지 않으면 학생을 먼저 저장해야 한다.
 
     // 과목이 저장돼 있지 않다면, 과목을 먼저 저장해야 한다.

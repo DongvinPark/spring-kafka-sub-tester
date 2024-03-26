@@ -12,7 +12,7 @@ public class KafkaMessageListener {
   private final ConsumerService consumerService;
 
   @KafkaListener(
-      topics = "subject0",
+      topics = "subject00",
       groupId = "subject-group-0",
       //id = "your-listener-id",
       //containerFactory = "kafkaListenerContainerFactory",
@@ -31,7 +31,7 @@ public class KafkaMessageListener {
   }
 
   @KafkaListener(
-      topics = "subject1",
+      topics = "subject01",
       groupId = "subject-group-1",
       //id = "your-listener-id",
       //containerFactory = "kafkaListenerContainerFactory",
@@ -50,7 +50,7 @@ public class KafkaMessageListener {
   }
 
   @KafkaListener(
-      topics = "subject2",
+      topics = "subject02",
       groupId = "subject-group-2",
       //id = "your-listener-id",
       //containerFactory = "kafkaListenerContainerFactory",
@@ -69,7 +69,7 @@ public class KafkaMessageListener {
   }
 
   @KafkaListener(
-      topics = "subject3",
+      topics = "subject03",
       groupId = "subject-group-3",
       //id = "your-listener-id",
       //containerFactory = "kafkaListenerContainerFactory",
@@ -88,7 +88,7 @@ public class KafkaMessageListener {
   }
 
   @KafkaListener(
-      topics = "subject4",
+      topics = "subject04",
       groupId = "subject-group-4",
       //id = "your-listener-id",
       //containerFactory = "kafkaListenerContainerFactory",
@@ -107,7 +107,7 @@ public class KafkaMessageListener {
   }
 
   @KafkaListener(
-      topics = "subject5",
+      topics = "subject05",
       groupId = "subject-group-5",
       //id = "your-listener-id",
       //containerFactory = "kafkaListenerContainerFactory",
@@ -126,7 +126,7 @@ public class KafkaMessageListener {
   }
 
   @KafkaListener(
-      topics = "subjec6",
+      topics = "subjec06",
       groupId = "subject-group-6",
       //id = "your-listener-id",
       //containerFactory = "kafkaListenerContainerFactory",
@@ -145,7 +145,7 @@ public class KafkaMessageListener {
   }
 
   @KafkaListener(
-      topics = "subject7",
+      topics = "subject07",
       groupId = "subject-group-7",
       //id = "your-listener-id",
       //containerFactory = "kafkaListenerContainerFactory",
@@ -164,7 +164,7 @@ public class KafkaMessageListener {
   }
 
   @KafkaListener(
-      topics = "subject8",
+      topics = "subject08",
       groupId = "subject-group-8",
       //id = "your-listener-id",
       //containerFactory = "kafkaListenerContainerFactory",
@@ -183,7 +183,7 @@ public class KafkaMessageListener {
   }
 
   @KafkaListener(
-      topics = "subject9",
+      topics = "subject09",
       groupId = "subject-group-9",
       //id = "your-listener-id",
       //containerFactory = "kafkaListenerContainerFactory",
