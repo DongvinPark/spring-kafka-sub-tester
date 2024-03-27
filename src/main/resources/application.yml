@@ -23,5 +23,7 @@ kafka:
   bootstrap:
     servers: 192.168.0.244:9092
 
+topics: subject00,subject01,subject02,subject03,subject04,subject05,subject06,subject07,subject08,subject09
+
 subject:
   limit: 80
