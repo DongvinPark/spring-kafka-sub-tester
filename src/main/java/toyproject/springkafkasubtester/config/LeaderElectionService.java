@@ -1,6 +1,5 @@
 package toyproject.springkafkasubtester.config;
 
-import java.util.concurrent.atomic.AtomicBoolean;
 import lombok.RequiredArgsConstructor;
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
