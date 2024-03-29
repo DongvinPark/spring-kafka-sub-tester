@@ -21,8 +21,8 @@ public class TestController {
   @PostMapping("/test-sub/{message}")
   public void testSub(
       @PathVariable String message
-      // 예시 메시지 >> 1:0
-      // 1번 학생이 0번 과목에 수강신청 했다는 의미.
+      // 예시 메시지 >> name01:0
+      // name01 이라는 studentId를 가진 학생이 0번 과목에 수강신청 했다는 의미.
   ){
     consumerService.processMessage(message);
   }

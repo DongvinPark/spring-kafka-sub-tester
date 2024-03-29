@@ -21,7 +21,7 @@ public class StudentSubjectMap {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  private Long studentId;
+  private String studentId;
 
   private Long subjectId;
 
