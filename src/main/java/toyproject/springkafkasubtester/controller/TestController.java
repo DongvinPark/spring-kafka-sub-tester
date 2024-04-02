@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-import toyproject.springkafkasubtester.entity.Student;
-import toyproject.springkafkasubtester.entity.Subject;
+import toyproject.springkafkasubtester.dto.StudentInfoDto;
+import toyproject.springkafkasubtester.dto.SubjectInfoDto;
 import toyproject.springkafkasubtester.service.ConsumerService;
 import toyproject.springkafkasubtester.service.TestService;
 
@@ -28,15 +28,15 @@ public class TestController {
   }
 
   @GetMapping("/students/{subjectId}")
-  public List<Student> getAllStudents(
+  public List<StudentInfoDto> getAllStudents(
       @PathVariable Long subjectId
   ){
     return testService.getAllStudentsBySubject(subjectId);
   }
 
   @GetMapping("/subjects/{studentId}")
-  public List<Subject> getAllSubjects(
-      @PathVariable Long studentId
+  public List<SubjectInfoDto> getAllSubjects(
+      @PathVariable String studentId
   ) {
     return testService.getAllSubjectsByStudentId(studentId);
   }
